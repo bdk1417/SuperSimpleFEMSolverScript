@@ -13,7 +13,7 @@ T(width,:)=0;
 T(:,height)=10;
 Told= zeros(height,width);
 loopCount=0;
-while(norm(abs(Told-T))>.00000005)
+while(norm(abs(Told-T))>.00000005 && loopCount<finalLoopCount)
     Told=T;
     loopCount=loopCount+1;
     for i=2:1:height-1,        
